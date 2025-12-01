@@ -1,13 +1,12 @@
-# amplify.yml
-
 version: 1
 applications:
-  - backend:
-    phases:
-      build:
-        commands:
-          - npm install
-          - npm install -D typescript
+  - appRoot: .
+    backend:
+      phases:
+        build:
+          commands:
+            - npm install
+            - npm install -D typescript
     frontend:
       phases:
         build:
@@ -16,7 +15,7 @@ applications:
       artifacts:
         baseDirectory: dist
         files:
-          - "/*"
+          - "**/*"
       cache:
         paths:
-          - .npm//*
+          - node_modules/**/*
