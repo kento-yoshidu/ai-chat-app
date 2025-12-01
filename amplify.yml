@@ -1,7 +1,6 @@
 # amplify.yml
 
 version: 1
-
 applications:
   - backend:
     phases:
