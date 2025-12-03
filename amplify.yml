@@ -7,6 +7,7 @@ applications:
           commands:
             - npm install
             - npm install -D typescript
+            - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
     frontend:
       phases:
         build:
